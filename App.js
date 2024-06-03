@@ -76,6 +76,7 @@ function Root() {
   useEffect(() => {
     async function fetchToken() {
       const storedToken = await AsyncStorage.getItem("token");
+      // اسینک استوریج یک حافظه در خود دستگاه به ما میدهد کخه میتوان اطلاعاتی در ان زخیره کنیم که برای اینکتر از سه ایتم گت و ست و ریمو استفاده میکنیم در ضمن مقدار اول اسم چیزی است که میخواهیم نگهداری کنیم دومین المان مقدرا ان است که در ضمن ان مقدرا فقط به صورت استرینگ زخیره میشود
 
       if (storedToken) {
         authCtx.authenticate(storedToken);
